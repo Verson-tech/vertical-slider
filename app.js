@@ -12,7 +12,16 @@ upBtn.addEventListener('click',()=>{
     changeSlide('up')
 })
 downBtn.addEventListener('click',()=>{
-    changeSlide('up')   
+    changeSlide('down')   
+})
+
+document.addEventListener('keydown',
+event => {
+    if (event.key === 'ArrowUp'){
+          changeSlide('down')
+    }else if(event.key === 'ArrowDown'){
+        changeSlide('up') 
+    }
 })
 
 function changeSlide(direction){
